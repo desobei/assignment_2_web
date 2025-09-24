@@ -1,0 +1,200 @@
+/* ================== Base ================== */
+html, body {
+	height: 100%;
+	margin: 0;
+	background: black;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
+.page-container {
+	min-height: 100vh;   /* always full screen */
+	position: relative;  /* footer relative to this */
+}
+
+.page-content {
+	padding-bottom: 80px; /* leave space for footer */
+	box-sizing: border-box;
+}
+
+/* clearfix for float layouts (Task 1) */
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* ================== Header ================== */
+#header {
+	background: #111;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+/* ================== Navigation ================== */
+#nav {
+	background: #222;
+	text-align: center;
+	padding: 10px 0;
+}
+#nav a {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 14px 20px;
+	position: relative;
+}
+/* hover underline (white) */
+#nav a:hover::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+}
+/* active tab underline (purple) */
+#nav a.active::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: purple;
+}
+
+/* ================== Sidebar (Task 1) ================== */
+#sidebar {
+	float: left;
+	width: 25%;
+	background: #1a1a1a;
+	padding: 15px;
+	box-sizing: border-box;
+	min-height: 300px;
+}
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+#sidebar li {
+	margin-bottom: 10px;
+}
+#sidebar a {
+	display: block;
+	background: #333;
+	color: white;
+	text-decoration: none;
+	padding: 8px;
+	border: 1px solid #555;
+}
+#sidebar a:hover {
+	background: #444;
+}
+
+/* ================== Main Content ================== */
+#content {
+	float: right;
+	width: 70%;
+	background: #000;
+	padding: 15px;
+	box-sizing: border-box;
+	min-height: 300px;
+	box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+/* full-width content (Task 2, 3, 4) */
+#content-full {
+	background: #000;
+	padding: 20px;
+	margin: 15px;
+	box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+/* ================== Footer ================== */
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background: #111;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+/* ================== Buttons ================== */
+.btn {
+	display: inline-block;
+	background: #222;
+	color: white;
+	padding: 10px 15px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.btn:hover {
+	background: #444;
+}
+
+/* ================== Tables (Task 3) ================== */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+th, td {
+	border: 1px solid #555;
+	padding: 10px;
+	text-align: center;
+}
+th {
+	background: #111;
+	color: white;
+}
+tr:nth-child(even) {
+	background: #222;
+}
+.highlight-row {
+	background: #444;
+}
+
+/* ================== Forms (Task 3) ================== */
+form {
+	background: #111;
+	padding: 20px;
+	border-radius: 8px;
+	width: 300px;
+}
+label {
+	font-weight: bold;
+}
+input, select, textarea {
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 8px;
+	border: 1px solid #555;
+	border-radius: 4px;
+	background: #000;
+	color: white;
+}
+input[type="submit"] {
+	cursor: pointer;
+}
+
+/* ================== Wireframes (Task 4) ================== */
+.wireframes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-top: 20px;
+}
+.wireframes img {
+	border: 2px solid #555;
+	border-radius: 6px;
+	background: #111;
+	box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}

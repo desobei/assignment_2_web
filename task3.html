@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment - Task 3</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-container">
+		<div class="page-content">
+      <!-- Header -->
+      <div id="header">
+        <h1>Table and Form</h1>
+      </div>
+
+      <!-- Navigation -->
+      <div id="nav">
+        <a href="index.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html" class="active">Task 3</a>
+        <a href="task4.html">Task 4</a>
+      </div>
+
+      <!-- Content -->
+      <div id="content-full">
+        <h2 id="grades-heading">Student Grades</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>Math</td>
+            <td>A</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Bob</td>
+            <td>Science</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <td>Charlie</td>
+            <td>History</td>
+            <td>A-</td>
+          </tr>
+        </table>
+
+        <h2>Feedback Form</h2>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br><br>
+
+          <label for="role">Role:</label><br>
+          <select id="role" name="role">
+            <option>Student</option>
+            <option>Teacher</option>
+            <option>Other</option>
+          </select><br><br>
+
+          <label>Do you like this course?</label><br>
+          <input type="radio" name="like" value="yes"> Yes
+          <input type="radio" name="like" value="no"> No<br><br>
+
+          <label for="comments">Comments:</label><br>
+          <textarea id="comments" name="comments" rows="4"></textarea><br><br>
+
+          <input type="submit" value="Submit" class="btn">
+        </form>
+      </div>
+    </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <p>&copy; 2025 My Assignment Website. All rights reserved.</p>
+      </div>
+  </div>
+</body>
+</html>
